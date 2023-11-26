@@ -7,6 +7,7 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)  # Corrected field name
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255, blank=True)
+    content = models.TextField(blank=True)
     image = models.ImageField(upload_to='images/', default='../pexels-david-mcbee-730564_szp18u')
 
     class Meta:
