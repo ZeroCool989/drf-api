@@ -110,8 +110,7 @@ if 'CLIENT_ORIGIN' in os.environ:
     ]
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://3000-zerocool989-web3stories-jpvt32hsqk\.us2\.codeanyapp\.com$",
-        
+    r"^https://\d{4}-[^\.]+\.codeanyapp\.com$",
     ]
 
 CORS_ALLOW_CREDENTIALS = True
