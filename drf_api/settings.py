@@ -107,7 +107,7 @@ MIDDLEWARE = [
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN'),
-        "https://3000-zerocool989-web3stories-jpvt32hsqk.us2.codeanyapp.com",
+        os.environ.get('CLIENT_ORIGIN_DEV'),
     ]
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
