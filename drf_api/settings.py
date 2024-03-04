@@ -59,8 +59,9 @@ REST_AUTH_SERIALIZERS = {
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -104,17 +105,30 @@ MIDDLEWARE = [
 ]
 
 # CORS settings
+CORS_ALLOWED_ORIGINS = []
 if 'CLIENT_ORIGIN' in os.environ:
-    CORS_ALLOWED_ORIGINS = [
-        os.environ.get('CLIENT_ORIGIN'),
-        os.environ.get('CLIENT_ORIGIN_DEV'),
-    ]
+    CORS_ALLOWED_ORIGINS.append(os.environ.get('CLIENT_ORIGIN'))
+if 'CLIENT_ORIGIN_DEV' in os.environ:
+    CORS_ALLOWED_ORIGINS.append(os.environ.get('CLIENT_ORIGIN_DEV'))
+
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://\d{4}-[^\.]+\.codeanyapp\.com$",
     ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-zerocool989-drf-api-9u43ucybr0.us1.codeanyapp.com',
+]
+
+
+CORS_ALLOWED_ORIGINS = [
+    'https://8000-zerocool989-drf-api-9u43ucybr0.us1.codeanyapp.com',
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 # URL configuration
 ROOT_URLCONF = 'drf_api.urls'
