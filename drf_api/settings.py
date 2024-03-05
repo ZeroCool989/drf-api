@@ -23,7 +23,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'default_secret_for_development')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['web3stories-1-f45ad8e4d34d.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['drf-api-web3stories-1-1392b5061a77.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -50,12 +50,12 @@ INSTALLED_APPS = [
     'comments',
     'likes',
     'followers',
-    'whitenoise.runserver_nostatic',  # <- Add this
+    'whitenoise.runserver_nostatic',  
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # <- Make sure this is above all other middleware except SecurityMiddleware
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
