@@ -24,7 +24,7 @@ ALLOWED_HOSTS = [
 # Site ID
 SITE_ID = 1
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-zerocool989-drfapi-zobxfqptnoj.ws-eu108.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-zerocool989-drfapi-zobxfqptnoj.ws-eu108.gitpod.io, https://drf-api-web3stories-1-1392b5061a77.herokuapp.com/']
 
 
 
