@@ -24,7 +24,8 @@ ALLOWED_HOSTS = [
 # Site ID
 SITE_ID = 1
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-zerocool989-drfapi-zobxfqptnoj.ws-eu108.gitpod.io, https://3000-zerocool989-web3stories-llcg5rr7t7p.ws-eu108.gitpod.io/signup']
+CSRF_TRUSTED_ORIGINS = ['https://8000-zerocool989-drfapi-zobxfqptnoj.ws-eu108.gitpod.io']
+
 
 
 # Application definition
